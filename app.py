@@ -16,23 +16,33 @@ from reportlab.lib.units import inch
 
 
 app = Flask(__name__)
-app.secret_key = os.environ.get("SECRET_KEY", "tu_clave_secreta_aqui")
 
-# Configuración Base de Datos
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///test_vocacional.db'
+
+app.secret_key = os.environ.get("SECRET_KEY", "clave_local_para_dev")
+
+
+default_sqlite = 'sqlite:///instance/test_vocacional.db'
+database_url = os.environ.get('DATABASE_URL', default_sqlite)
+
+
+if database_url.startswith("postgres://"):
+    database_url = database_url.replace("postgres://", "postgresql://", 1)
+
+app.config['SQLALCHEMY_DATABASE_URI'] = database_url
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
+
 app.config.update(
-    MAIL_SERVER='smtp.gmail.com',
-    MAIL_PORT=587,
-    MAIL_USE_TLS=True,
+    MAIL_SERVER=os.environ.get("MAIL_SERVER", "smtp.gmail.com"),
+    MAIL_PORT=int(os.environ.get("MAIL_PORT", 587)),
+    MAIL_USE_TLS=(os.environ.get("MAIL_USE_TLS", "True") == "True"),
     MAIL_USERNAME=os.environ.get("MAIL_USER", "testvocacional44@gmail.com"),
-    MAIL_PASSWORD=os.environ.get("MAIL_PASS", "qzuwfvnfnybutjfm"), 
     MAIL_DEFAULT_SENDER=os.environ.get("MAIL_USER", "testvocacional44@gmail.com")
 )
 
 db = SQLAlchemy(app)
 mail = Mail(app)
+
 
 # Modelos de BD
 class Usuario(db.Model):
