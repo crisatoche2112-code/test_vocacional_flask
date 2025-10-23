@@ -1,0 +1,6 @@
+venv/
+__pycache__/
+*.pyc
+instance/test_vocacional.db
+.env
+
