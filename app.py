@@ -6,42 +6,37 @@ from reportlab.pdfgen import canvas
 import json
 import os
 import random  
-from reportlab.lib.pagesizes import letter
-from reportlab.lib.colors import blue, gray, black, lightblue
+from reportlab.lib.pagesizes import letter  # Para tamaño de página
+from reportlab.lib.colors import blue, gray, black, lightblue  # Para colores
 from reportlab.pdfbase import pdfmetrics
-from reportlab.pdfbase.ttfonts import TTFont
+from reportlab.pdfbase.ttfonts import TTFont  # Para fuentes personalizadas (opcional)
 from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
 from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Table, TableStyle
 from reportlab.lib.units import inch
 
 
 app = Flask(__name__)
-app.secret_key = os.environ.get("SECRET_KEY", "clave_local_para_dev")
+app.secret_key = os.environ.get("SECRET_KEY", "tu_clave_secreta_aqui")
 
-# Base de datos (PostgreSQL en Render, SQLite localmente)
-default_sqlite = 'sqlite:///instance/test_vocacional.db'
-database_url = os.environ.get('DATABASE_URL', default_sqlite)
-
-if database_url.startswith("postgres://"):
-    database_url = database_url.replace("postgres://", "postgresql://", 1)
-
-app.config['SQLALCHEMY_DATABASE_URI'] = database_url
+# Configuración Base de Datos PostgreSQL
+app.config['SQLALCHEMY_DATABASE_URI'] = (
+    'postgresql://instance_qr0j_user:EhvbROiTvfugAiiPIxtHqTAsOfkywtYJ'
+    '@dpg-d3td8mvdiees73deuf5g-a.oregon-postgres.render.com/instance_qr0j'
+)
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
-# Configuración del correo
+
 app.config.update(
-    MAIL_SERVER=os.environ.get("MAIL_SERVER", "smtp.gmail.com"),
-    MAIL_PORT=int(os.environ.get("MAIL_PORT", 587)),
-    MAIL_USE_TLS=(os.environ.get("MAIL_USE_TLS", "True") == "True"),
+    MAIL_SERVER='smtp.gmail.com',
+    MAIL_PORT=587,
+    MAIL_USE_TLS=True,
     MAIL_USERNAME=os.environ.get("MAIL_USER", "testvocacional44@gmail.com"),
-    MAIL_PASSWORD=os.environ.get("MAIL_PASS", "qzuwfvnfnybutjfm"),
+    MAIL_PASSWORD=os.environ.get("MAIL_PASS", "qzuwfvnfnybutjfm"), 
     MAIL_DEFAULT_SENDER=os.environ.get("MAIL_USER", "testvocacional44@gmail.com")
 )
 
 db = SQLAlchemy(app)
 mail = Mail(app)
-
-
 
 # Modelos de BD
 class Usuario(db.Model):
@@ -50,16 +45,13 @@ class Usuario(db.Model):
     apellido = db.Column(db.String(100), nullable=False)
     edad = db.Column(db.Integer, nullable=False)
     correo = db.Column(db.String(120), unique=True, nullable=False)
-    resultados = db.relationship("Resultado", backref="usuario", lazy=True)
 
 class Resultado(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    usuario_id = db.Column(db.Integer, db.ForeignKey('usuario.id'), nullable=False)
+    usuario_id = db.Column(db.Integer, nullable=False)
     perfil = db.Column(db.String(100), nullable=False)
     puntajes = db.Column(db.String(500), nullable=False) 
 
-with app.app_context():
-    db.create_all()
 
 # Preguntas del test (tu lista completa)
 preguntas = [
