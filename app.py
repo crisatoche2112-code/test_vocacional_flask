@@ -321,13 +321,7 @@ def test():
             msg = Message("Resultados Test Vocacional", recipients=[usuario.correo])
             msg.body = f"Hola {usuario.nombre},\n\nAdjunto encontrarás tu reporte del test vocacional.\n\nSaludos."
             msg.attach("resultado_test.pdf", "application/pdf", pdf_buffer.read())
-            try:
-                mail.send(msg)
-            except socket.timeout:
-                flash('El envío del correo excedió el tiempo límite.', 'error')
-            except Exception as e:
-                flash(f'Error al enviar correo: {str(e)}', 'error')
-                
+            mail.send(msg)
             flash('Reporte PDF enviado a tu correo.', 'success')
         except Exception as e:
             flash(f'Error al enviar correo: {str(e)}', 'error')
