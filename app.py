@@ -316,11 +316,11 @@ def test():
         session['puntajes'] = puntajes
         # Generar PDF con carreras
         usuario = Usuario.query.get(session['usuario_id'])
-        pdf_buffer = generar_pdf(perfil_predominante, puntajes, usuario.nombre, carreras_recomendadas)
+        # pdf_buffer = generar_pdf(perfil_predominante, puntajes, usuario.nombre, carreras_recomendadas)
         try:
             msg = Message("Resultados Test Vocacional", recipients=[usuario.correo])
             msg.body = f"Hola {usuario.nombre},\n\nAdjunto encontrarás tu reporte del test vocacional.\n\nSaludos."
-            msg.attach("resultado_test.pdf", "application/pdf", pdf_buffer.read())
+            # msg.attach("resultado_test.pdf", "application/pdf", pdf_buffer.read())
             mail.send(msg)
             flash('Reporte PDF enviado a tu correo.', 'success')
         except Exception as e:
