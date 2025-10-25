@@ -30,9 +30,9 @@ app.config.update(
     MAIL_SERVER='smtp.gmail.com',
     MAIL_PORT=587,
     MAIL_USE_TLS=True,
-    MAIL_USERNAME='testvocacional44@gmail.com',
-    MAIL_PASSWORD='qzuwfvnfnybutjfm', 
-    MAIL_DEFAULT_SENDER='testvocacional44@gmail.com'
+    MAIL_USERNAME=os.environ.get("MAIL_USER", "testvocacional44@gmail.com"),
+    MAIL_PASSWORD=os.environ.get("MAIL_PASS", "qzuwfvnfnybutjfm"), 
+    MAIL_DEFAULT_SENDER=os.environ.get("MAIL_USER", "testvocacional44@gmail.com")
 )
 
 db = SQLAlchemy(app)
@@ -316,11 +316,11 @@ def test():
         session['puntajes'] = puntajes
         # Generar PDF con carreras
         usuario = Usuario.query.get(session['usuario_id'])
-        # pdf_buffer = generar_pdf(perfil_predominante, puntajes, usuario.nombre, carreras_recomendadas)
+        pdf_buffer = generar_pdf(perfil_predominante, puntajes, usuario.nombre, carreras_recomendadas)
         try:
             msg = Message("Resultados Test Vocacional", recipients=[usuario.correo])
             msg.body = f"Hola {usuario.nombre},\n\nAdjunto encontrarás tu reporte del test vocacional.\n\nSaludos."
-            # msg.attach("resultado_test.pdf", "application/pdf", pdf_buffer.read())
+            msg.attach("resultado_test.pdf", "application/pdf", pdf_buffer.read())
             mail.send(msg)
             flash('Reporte PDF enviado a tu correo.', 'success')
         except Exception as e:
