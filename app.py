@@ -30,9 +30,9 @@ app.config.update(
     MAIL_SERVER='smtp.gmail.com',
     MAIL_PORT=587,
     MAIL_USE_TLS=True,
-    MAIL_USERNAME=os.environ.get("MAIL_USER", "testvocacional44@gmail.com"),
-    MAIL_PASSWORD=os.environ.get("MAIL_PASS", "qzuwfvnfnybutjfm"), 
-    MAIL_DEFAULT_SENDER=os.environ.get("MAIL_USER", "testvocacional44@gmail.com")
+    MAIL_USERNAME='testvocacional44@gmail.com',
+    MAIL_PASSWORD='qzuwfvnfnybutjfm', 
+    MAIL_DEFAULT_SENDER='testvocacional44@gmail.com'
 )
 
 db = SQLAlchemy(app)
