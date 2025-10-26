@@ -6,10 +6,10 @@ from reportlab.pdfgen import canvas
 import json
 import os
 import random  
-from reportlab.lib.pagesizes import letter  # Para tamaño de página
-from reportlab.lib.colors import blue, gray, black, lightblue  # Para colores
+from reportlab.lib.pagesizes import letter  
+from reportlab.lib.colors import blue, gray, black, lightblue  
 from reportlab.pdfbase import pdfmetrics
-from reportlab.pdfbase.ttfonts import TTFont  # Para fuentes personalizadas (opcional)
+from reportlab.pdfbase.ttfonts import TTFont  
 from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
 from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Table, TableStyle
 from reportlab.lib.units import inch
@@ -18,20 +18,18 @@ from reportlab.lib.units import inch
 app = Flask(__name__)
 app.secret_key = os.environ.get("SECRET_KEY", "tu_clave_secreta_aqui")
 
-# Configuración Base de Datos PostgreSQL
 app.config['SQLALCHEMY_DATABASE_URI'] = (
-    'postgresql://instance_qr0j_user:EhvbROiTvfugAiiPIxtHqTAsOfkywtYJ'
-    '@dpg-d3td8mvdiees73deuf5g-a.oregon-postgres.render.com/instance_qr0j'
+    'mysql+pymysql://TestVocacional44:Testupn2025*'
+    '@TestVocacional44.mysql.pythonanywhere-services.com/TestVocacional44$default'
 )
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-
 
 app.config.update(
     MAIL_SERVER='smtp.gmail.com',
     MAIL_PORT=587,
     MAIL_USE_TLS=True,
     MAIL_USERNAME=os.environ.get("MAIL_USER", "testvocacional44@gmail.com"),
-    MAIL_PASSWORD=os.environ.get("MAIL_PASS", "qzuwfvnfnybutjfm"), 
+    MAIL_PASSWORD=os.environ.get("MAIL_PASS", "qzuwfvnfnybutjfm"),  
     MAIL_DEFAULT_SENDER=os.environ.get("MAIL_USER", "testvocacional44@gmail.com")
 )
 
