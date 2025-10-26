@@ -66,8 +66,415 @@ preguntas = [
             'Sí': ['Realista'],
             'No': []
         }
+    },
+    {
+        'texto': '¿Te gustaría participar para mantener el orden ante grandes desórdenes y cataclismos?',
+        'opciones': {
+            'Sí': ['Realista'],
+            'No': []
+        }
+    },
+    {
+        'texto': '¿Te incluirías en un proyecto de investigación de los movimientos sísmicos y sus consecuencias?',
+        'opciones': {
+            'Sí': ['Investigativo'],
+            'No': []
+        }
+    },
+    {
+        'texto': '¿Te interesan las actividades de mucha acción y de reacción rápida en situaciones imprevistas y de algún peligro?',
+        'opciones': {
+            'Sí': ['Realista'],
+            'No': []
+        }
+    },
+    {
+        'texto': '¿Arriesgarías tu vida para salvar la vida de otro que no conoces?',
+        'opciones': {
+            'Sí': ['Social'],
+            'No': []
+        }
+    },
+    {
+        'texto': '¿Elegirías una profesión en la tuvieras que estar algunos meses alejado de tu familia, por ejemplo el marino?',
+        'opciones': {
+            'Sí': ['Realista'],
+            'No': []
+        }
+    },
+    {
+        'texto': '¿Te gustaría realizar tareas auxiliares en una nave, como por ejemplo izado y arriado de velas, pintura y conservación del casco, arreglo de averías, conservación de motores, etc.?',
+        'opciones': {
+            'Sí': ['Realista'],
+            'No': []
+        }
+    },
+    {
+        'texto': '¿Estás de acuerdo con la formación de un cuerpo de soldados profesionales?',
+        'opciones': {
+            'Sí': ['Realista'],
+            'No': []
+        }
+    },
+    {
+        'texto': '¿Participarías en un grupo de defensa internacional dentro de alguna fuerza armada?',
+        'opciones': {
+            'Sí': ['Realista'],
+            'No': []
+        }
+    },
+    {
+        'texto': '¿Te gustaría estar informado sobre los nuevos descubrimientos que se están realizando sobre el origen del Universo?',
+        'opciones': {
+            'Sí': ['Investigativo'],
+            'No': []
+        }
+    },
+    {
+        'texto': '¿Te gustaría crear nuevas técnicas para descubrir las patologías de algunas enfermedades a través del microscopio?',
+        'opciones': {
+            'Sí': ['Investigativo'],
+            'No': []
+        }
+    },
+    {
+        'texto': '¿Te gustaría trabajar en un laboratorio mientras estudias?',
+        'opciones': {
+            'Sí': ['Investigativo'],
+            'No': []
+        }
+    },
+    {
+        'texto': '¿Te resultó interesante el estudio de las ciencias biológicas?',
+        'opciones': {
+            'Sí': ['Investigativo'],
+            'No': []
+        }
+    },
+    {
+        'texto': '¿Te interesaría investigar sobre alguna nueva vacuna?',
+        'opciones': {
+            'Sí': ['Investigativo'],
+            'No': []
+        }
+    },
+    {
+        'texto': '¿Visitarías un observatorio astronómico para conocer en acción el funcionamiento de los aparatos?',
+        'opciones': {
+            'Sí': ['Investigativo'],
+            'No': []
+        }
+    },
+    {
+        'texto': '¿Te atrae investigar sobre los misterios del universo, por ejemplo los agujeros negros?',
+        'opciones': {
+            'Sí': ['Investigativo'],
+            'No': []
+        }
+    },
+    {
+        'texto': '¿Te gustaría trabajar como profesional dirigiendo la construcción de una empresa hidroeléctrica?',
+        'opciones': {
+            'Sí': ['Investigativo'],
+            'No': []
+        }
+    },
+    {
+        'texto': '¿Te atrae armar rompecabezas o puzzles?',
+        'opciones': {
+            'Sí': ['Artístico'],
+            'No': []
+        }
+    },
+    {
+        'texto': '¿Disfrutas modelando con arcilla?',
+        'opciones': {
+            'Sí': ['Artístico'],
+            'No': []
+        }
+    },
+    {
+        'texto': '¿Desearías que te regalen algún instrumento musical para tu cumpleaños?',
+        'opciones': {
+            'Sí': ['Artístico'],
+            'No': []
+        }
+    },
+    {
+        'texto': '¿Harías un nuevo diseño de una prenda pasada de moda, ante una reunión?',
+        'opciones': {
+            'Sí': ['Artístico'],
+            'No': []
+        }
+    },
+    {
+        'texto': '¿Harías el diseño de un cartel o afiche para una campaña contra el sida?',
+        'opciones': {
+            'Sí': ['Artístico'],
+            'No': []
+        }
+    },
+    {
+        'texto': '¿Dirigirías un grupo de teatro independiente?',
+        'opciones': {
+            'Sí': ['Artístico'],
+            'No': []
+        }
+    },
+    {
+        'texto': '¿Elegirías una carrera cuyo instrumento de trabajo fuere la utilización de un idioma extranjero?',
+        'opciones': {
+            'Sí': ['Social'],
+            'No': []
+        }
+    },
+    {
+        'texto': '¿Cuando eliges tu ropa o decoras un ambiente, tienes en cuenta la combinación de los colores, las telas o el estilo de los muebles?',
+        'opciones': {
+            'Sí': ['Artístico'],
+            'No': []
+        }
+    },
+    {
+        'texto': '¿Cuando estás en un grupo trabajando, te entusiasma producir ideas originales y que sean tenidas en cuenta?',
+        'opciones': {
+            'Sí': ['Artístico'],
+            'No': []
+        }
+    },
+    {
+        'texto': '¿Descubriste algún filósofo o escritor que haya expresado tus mismas ideas con antelación?',
+        'opciones': {
+            'Sí': ['Investigativo'],
+            'No': []
+        }
+    },
+    {
+        'texto': '¿Te ofrecerías para organizar la despedida de soltero de uno de tus amigos?',
+        'opciones': {
+            'Sí': ['Social'],
+            'No': []
+        }
+    },
+    {
+        'texto': '¿Te ofrecerías para explicar a tus compañeros un determinado tema que ellos no entendieron?',
+        'opciones': {
+            'Sí': ['Social'],
+            'No': []
+        }
+    },
+    {
+        'texto': '¿Si te convocara tu club preferido para planificar, organizar y dirigir un campo de deportes, aceptarías?',
+        'opciones': {
+            'Sí': ['Social'],
+            'No': []
+        }
+    },
+    {
+        'texto': '¿Te resulta fácil coordinar un grupo de trabajo?',
+        'opciones': {
+            'Sí': ['Social'],
+            'No': []
+        }
+    },
+    {
+        'texto': '¿En un equipo de trabajo, preferís el rol de coordinador?',
+        'opciones': {
+            'Sí': ['Social'],
+            'No': []
+        }
+    },
+    {
+        'texto': '¿Dirigirías el área de importación y exportación de una empresa?',
+        'opciones': {
+            'Sí': ['Social'],
+            'No': []
+        }
+    },
+    {
+        'texto': '¿Enviarías tu curriculum a una empresa automotriz que solicita gerente para su área de producción?',
+        'opciones': {
+            'Sí': ['Social'],
+            'No': []
+        }
+    },
+    {
+        'texto': '¿Te resultaría gratificante ser asesor contable en una empresa reconocida?',
+        'opciones': {
+            'Sí': ['Investigativo'],
+            'No': []
+        }
+    },
+    {
+        'texto': '¿Si una gran empresa solicita un profesional como gerente de comercialización, te sentirías a gusto desempeñando ese rol?',
+        'opciones': {
+            'Sí': ['Social'],
+            'No': []
+        }
+    },
+    {
+        'texto': '¿Te incluirías en un proyecto nacional de desarrollo de la principal fuente de recursos de tu provincia?',
+        'opciones': {
+            'Sí': ['Social'],
+            'No': []
+        }
+    },
+    {
+        'texto': '¿Te dedicarías a socorrer a personas accidentadas o atacadas por asaltantes?',
+        'opciones': {
+            'Sí': ['Social'],
+            'No': []
+        }
+    },
+    {
+        'texto': '¿Escuchas atentamente los problemas que te plantean tus amigos?',
+        'opciones': {
+            'Sí': ['Social'],
+            'No': []
+        }
+    },
+    {
+        'texto': '¿Ayudas habitualmente a los no videntes (a quien lo necesite) a cruzar la calle?',
+        'opciones': {
+            'Sí': ['Social'],
+            'No': []
+        }
+    },
+    {
+        'texto': '¿Participarías en una campaña de prevención contra la enfermedad como el sida?',
+        'opciones': {
+            'Sí': ['Social'],
+            'No': []
+        }
+    },
+    {
+        'texto': '¿Estarías dispuesto a renunciar a un momento placentero para ofrecer tu servicio como profesional (ayudando)?',
+        'opciones': {
+            'Sí': ['Social'],
+            'No': []
+        }
+    },
+    {
+        'texto': '¿Te agradaría hacer un curso de primeros auxilios?',
+        'opciones': {
+            'Sí': ['Social'],
+            'No': []
+        }
+    },
+    {
+        'texto': '¿Ante una emergencia epidémica participarías en una campaña brindando tu ayuda?',
+        'opciones': {
+            'Sí': ['Social'],
+            'No': []
+        }
+    },
+    {
+        'texto': '¿Ante un llamado solidario, te ofrecerías para cuidar a un enfermo?',
+        'opciones': {
+            'Sí': ['Social'],
+            'No': []
+        }
+    },
+    {
+        'texto': '¿Dedicarías parte de tu tiempo a ayudar a personas con carencias o necesitadas?',
+        'opciones': {
+            'Sí': ['Social'],
+            'No': []
+        }
+    },
+    {
+        'texto': '¿Formarías parte de un equipo de trabajo orientado a la preservación de la flora y la fauna en extinción?',
+        'opciones': {
+            'Sí': ['Investigativo'],
+            'No': []
+        }
+    },
+    {
+        'texto': '¿Aceptarías trabajar escribiendo artículos en la sección económica de un diario?',
+        'opciones': {
+            'Sí': ['Investigativo'],
+            'No': []
+        }
+    },
+    {
+        'texto': '¿Te gustaría dirigir/crear un proyecto de urbanización en tu provincia?',
+        'opciones': {
+            'Sí': ['Social'],
+            'No': []
+        }
+    },
+    {
+        'texto': '¿Te gustaría conocer la diferencia entre macroeconomía y microeconomía?',
+        'opciones': {
+            'Sí': ['Investigativo'],
+            'No': []
+        }
+    },
+    {
+        'texto': '¿Organizas tu dinero de manera que te alcance hasta el próximo cobro?',
+        'opciones': {
+            'Sí': ['Investigativo'],
+            'No': []
+        }
+    },
+    {
+        'texto': '¿Entablas una relación casi personal con tu ordenador?',
+        'opciones': {
+            'Sí': ['Investigativo'],
+            'No': []
+        }
+    },
+    {
+        'texto': '¿Te radicarías en una zona agrícola-ganadera para desarrollar tus actividades como profesional?',
+        'opciones': {
+            'Sí': ['Realista'],
+            'No': []
+        }
+    },
+    {
+        'texto': '¿Tienes interés por saber cuales son las causas que determinan ciertos fenómenos, aunque saberlo no altere tu vida?',
+        'opciones': {
+            'Sí': ['Investigativo'],
+            'No': []
+        }
+    },
+    {
+        'texto': '¿Leerías revistas relacionadas con los últimos avances científicos y tecnológicos en el área de la salud?',
+        'opciones': {
+            'Sí': ['Investigativo'],
+            'No': []
+        }
+    },
+    {
+        'texto': '¿Te gustaría investigar científicamente sobre cultivos agrícolas?',
+        'opciones': {
+            'Sí': ['Investigativo'],
+            'No': []
+        }
+    },
+    {
+        'texto': '¿Sabes qué es el PIB?',
+        'opciones': {
+            'Sí': ['Investigativo'],
+            'No': []
+        }
+    },
+    {
+        'texto': '¿Fuera de los horarios escolares, dedicas algún día de la semana a la realización de actividades corporales?',
+        'opciones': {
+            'Sí': ['Realista'],
+            'No': []
+        }
+    },
+    {
+        'texto': '¿Eres el que pone un toque de alegría en las fiestas?',
+        'opciones': {
+            'Sí': ['Social'],
+            'No': []
+        }
     }
 ]
+
 
 # Carreras recomendadas por perfil (específicas y profesionales en Perú, ~60 total)
 carreras_por_perfil = {
