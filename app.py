@@ -337,4 +337,10 @@ def resultados():
     return render_template('resultados.html', respuestas=respuestas, perfil=perfil, puntajes=puntajes, carreras=carreras)
 # Iniciar la app
 if __name__ == '__main__':
+    # Bloque de inicialización de la base de datos (IMPORTANTE para PythonAnywhere)
+    with app.app_context():
+        db.create_all()
+        print("Tablas de la base de datos creadas en MySQL.")
+    
+    # Esta línea se usa solo para desarrollo local, no la usa PythonAnywhere.
     app.run(debug=True)
