@@ -51,7 +51,7 @@ class Resultado(db.Model):
     puntajes = db.Column(db.String(500), nullable=False) 
 
 
-# Preguntas del test (tu lista completa)
+# Preguntas para el test
 preguntas = [
     {
         'texto': '¿Participarías como profesional en un espectáculo de acrobacia aérea?',
@@ -476,7 +476,7 @@ preguntas = [
 ]
 
 
-# Carreras recomendadas por perfil (específicas y profesionales en Perú, ~60 total)
+# Carreras recomendadas por perfil destacado
 carreras_por_perfil = {
     "Realista": [
         "Ingeniería Civil",
@@ -549,7 +549,7 @@ carreras_por_perfil = {
 }
 
 
-# Descripciones de perfiles (adaptadas a tu ejemplo)
+# Descripciones de perfiles
 descripciones_perfiles = {
     "Realista": {
         "titulo": "Realista",
@@ -573,7 +573,7 @@ descripciones_perfiles = {
     }
 }
 
-# Función para generar PDF formal y decorado
+# Función para generar pdf
 def generar_pdf(perfil, puntajes, nombre_usuario, carreras):
     import random
     buffer = BytesIO()
@@ -588,11 +588,11 @@ def generar_pdf(perfil, puntajes, nombre_usuario, carreras):
     
     story = []
     
-    # Título principal
+   
     story.append(Paragraph("Reporte de Test Vocacional", title_style))
     story.append(Spacer(1, 0.2 * inch))
     
-    # Introducción
+   
     intro_text = """
     Este reporte fue diseñado para ayudarte a elegir entre una extensa gama de opciones que te ofrece el campo educativo superior. 
     Una de las decisiones más importantes en la vida es la elección de carrera, así que el siguiente reporte se compone por los resultados 
@@ -665,7 +665,7 @@ def generar_pdf(perfil, puntajes, nombre_usuario, carreras):
     return buffer
 
 
-# Rutas principales
+# Rutas 
 @app.route('/')
 def index():
     return render_template('index.html')
@@ -744,10 +744,10 @@ def resultados():
     return render_template('resultados.html', respuestas=respuestas, perfil=perfil, puntajes=puntajes, carreras=carreras)
 # Iniciar la app
 if __name__ == '__main__':
-    # Bloque de inicialización de la base de datos (IMPORTANTE para PythonAnywhere)
+    # Bloque de inicialización de la base de datos
     with app.app_context():
         db.create_all()
         print("Tablas de la base de datos creadas en MySQL.")
     
-    # Esta línea se usa solo para desarrollo local, no la usa PythonAnywhere.
+    # solo para desarrollo local
     app.run(debug=True)
